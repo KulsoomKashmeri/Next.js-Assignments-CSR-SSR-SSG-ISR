@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        padding: 0;
+        font-family: cursive;
+        background-image: url(assets/bg.png);
+        height: 100;
+        background-blend-mode: color;
+        background-color: rgba(243, 245, 247, 0.801); 
+        margin: bottom 0;
+        color: rgb(40, 37, 37)
+    }
+    h1{
+        text-decoration: underline;
+        color:rgb(30, 120, 165)
+    }
+    section{
+        display: flex;
+        color:rgb(248, 238, 238);
+        font-size: 11px;
+        padding-left: 90px;
+        justify-content: space-between;
+    }
+    .section1{
+      
+      width:300px;
+  }
+    img{
+       height: 250px;
+       width: 250px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        background-origin: padding-box;
+        color:aqua;
+        box-shadow:0 4px 8px rgba(0, 0, 0, 0.3);
+        margin-right: 30px;
+    } 
+    .text{ 
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .heading{
+
+        text-decoration: underline;
+        color:rgb(30, 120, 165);
+    
+    }
+    .heading:hover{
+        color:rgb(31, 91, 121);
+    }
+    span{
+        color:rgb(183, 128, 70);
+        background-color: rgb(209, 209, 116);
+        
+    }
+    .light{
+        color:rgb(111, 33, 33);
+        background-color: rgb(209, 209, 116);
+    }
+    .green{
+        color:green;
+        background-color: rgb(209, 209, 116);
+    }
+    .banner img{
+        width:200px ;
+        height:100px
+    }
+
+    
+</style>
+
+</head>
+<body>
+    <h1  class="heading"align="center"> Rendering concepts</h1>
+    <br>
+    <section >
+        
+        <div class="section1">
+                <h1>Server-Side Rendering <span class="light">(SSR)</span></h1>
+                <p>Server-Side Rendering <span class="light">(SSR)</span> is a technique used in web development where the server generates the <span class="green">HTML</span>
+                     content of a page before sending it to the client's browser. This differs from Client-Side Rendering <span class="green">(CSR) </span>, where the browser downloads a minimal HTML shell and populates the content dynamically using JavaScript. In SSR, the server compiles and renders
+                      the webpage on request and sends the fully rendered HTML to the client.</p>
+            
+                <h3>Benefits of SSR</h3>
+                <ul>
+                    <li><strong><span class="green">Improved SEO:</span></strong> Since search engines can directly crawl fully rendered HTML, SSR improves the visibility 
+                        of the content in search engine results.</li>
+                    <li><strong><span class="green">Faster initial load:</span></strong> The initial load time is faster, as users don't need to wait for JavaScript to fetch and render the content.</li>
+                    <li><strong><span class="green">Better performance on low-powered devices:</span></strong> Since rendering happens on the server, it can be more efficient for devices with lower processing power.</li>
+                </ul>
+            
+                <h3>Use Cases of SSR</h3>
+                <ul>
+                    <li>When SEO is critical <span class="green">(e.g., for e-commerce sites or blogs).</span></li>
+                    <li>When the app needs to render complex data quickly on the first page load.</li>
+                </ul>  
+        </div>
+        <div class="two">
+            <img src="../images/ssr.png">
+        </div>
+    </section>
+    
+
+    <section>
+        <div class="section1">
+            
+            <p>
+
+    <h1>Client-Side Rendering <span class="light">(CSR)</span></h1>
+
+    <p>Client-Side Rendering <span class="light">(CSR)</span> is a web development technique where the content of a webpage is generated on the client’s side<span> (the browser) </span>rather than the server. Here's how it works:</p>
+
+    <h2>How CSR Works</h2>
+    <ul>
+        <li><strong><span>Initial Request:</span></strong> When a user accesses a website, the server sends a basic HTML document and JavaScript files to the browser.</li>
+        <li><strong><span>Rendering in the Browser:</span></strong> The JavaScript executes in the browser, fetching additional content  <span>(often from an API) </span>and dynamically updating the DOM to display the full page.</li>
+        <li><strong><span>Updates and Interactions:</span></strong> Subsequent updates to the page <span>(like clicking a link or submitting a form) </span>often don't require a full page reload. JavaScript can handle this within the browser using frameworks like React, Angular, or Vue.js.</li>
+
+    </ul>
+<div class="para">
+    <h2>Advantages of CSR</h2>
+    <ul>
+        <li><strong><span>Fast User Interactions:</span></strong> After the initial page load, interactions are generally faster since only specific parts of the page are updated.</li>
+        <li><strong><span>Rich User Interfaces:</span></strong> CSR allows for more dynamic, responsive interfaces by leveraging JavaScript directly in the browser.</li>
+    </ul>
+
+    <h2>Disadvantages of CSR</h2>
+    <ul>
+        <li><strong><span>SEO Challenges:</span></strong> Since the content is loaded dynamically, search engine crawlers may not index the page content as easily <span class="green">(though this can be mitigated with server-side rendering or static generation)</span>.</li>
+        <li><strong><span>Longer Initial Load Time:</span></strong> The initial page load can be slower, especially if the JavaScript bundle is large.</li>
+    </ul>
+
+    <p>CSR is commonly used in single-page applications <span class="green">(SPAs)</span> where a fluid, app-like experience is needed.</p>
+
+      
+            </p>
+        </div>
+        </div>
+        <div>
+            <img src="../images/csr.png" alt="blank" width="300px" height="300px">
+        </div>
+    </section>
+    <div  class="banner"align="center"><img src="../images/nextjs.png" alt="" width="100px" height="50px"></div>
+    <section>
+        
+        
+        <div class="section1">
+        
+
+        <h1>SSG (Static Site Generation)</h1>
+        <p>In <span class="light"> SSG, HTML</span> files are generated at build time. This means that when you build your website, all the pages are pre-generated as static  <span class="light">HTML</span> files. When a user visits a page, they see the pre-built static  <span class="light">HTML</span>, resulting in faster load times.</p>
+        <h3>Key Features:</h3>
+        <ul>
+          <li><span>SEO-friendly</span> because pages are pre-rendered for search engines.</li>
+          <li><span>Better performance</span> as there is no need to fetch dynamic data on each request.</li>
+          <li><span>Data is fetched </span> and rendered during the build process, not at runtime.</li>
+        </ul>
+    </div>
+
+    <div>
+        <img src="../images/ssg.png" alt="" width="300px" height="300px">
+    </div>
+    </section>
+    <br>
+    <br>
+
+    <section>
+        <div class="section1">
+            <h1>ISR (Incremental Static Regeneration)</h1>
+            <p> <span>ISR</span> allows you to dynamically update static pages by regenerating them in the background after a certain interval or trigger. It provides the performance benefits of static pages while keeping content up to date.</p>
+            <h3>Key Features:</h3>
+            <ul>
+              <li> <span>Static pages are served</span>, but content can still be updated periodically.</li>
+              <li><span>No need to rebuild</span> the entire website, only individual pages are revalidated.</li>
+              <li> <span>You can control</span> how frequently a page is revalidated <span class="green">(e.g., every 10 seconds).</li>
+            </ul>
+        </div>
+        <div>
+            <img src="../images/isr.png" alt="blank">
+        </div>
+
+    </section>
+
+
+</body>
+</html>
